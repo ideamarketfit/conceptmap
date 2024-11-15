@@ -1,5 +1,5 @@
 const config = {
-  siteUrl: process.env.SITE_URL || 'https://www.chatdiagram.com',
+  siteUrl: process.env.SITE_URL || 'https://www.conceptmap.ai',
   generateRobotsTxt: true,
   sitemapSize: 7000,
   alternateRefs: [

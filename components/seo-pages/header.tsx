@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { MessageSquare } from 'lucide-react'
+import { BrainCircuit } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { usePathname } from 'next/navigation'
 import { useTranslation } from '@/hooks/useTranslation'
@@ -24,8 +24,7 @@ export function HeaderComponent() {
 
   const isChat = pathname === '/chat'
   const navItems = [
-    { key: 'tools' as const, href: '/tool' },
-    { key: 'templates' as const, href: '/template' },
+    { key: 'examples' as const, href: '/example' },
     // { key: 'blogs' as const, href: '#' }
   ]
 
@@ -37,9 +36,9 @@ export function HeaderComponent() {
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-8">
             <Link href={getLocalizedPath('/')} className="flex items-center space-x-2 group">
-              <MessageSquare className="h-9 w-9 text-purple-600 group-hover:text-purple-700 transition-colors duration-300" />
+              <BrainCircuit className="h-9 w-9 text-purple-600 group-hover:text-purple-700 transition-colors duration-300" />
               <span className="text-xl sm:text-2xl font-bold text-gray-800">
-                Chat Diagram
+                ConceptMap.AI
               </span>
             </Link>
             {!isChat && (

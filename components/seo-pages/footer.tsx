@@ -10,8 +10,7 @@ export function FooterComponent() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="hover:text-purple-400 transition duration-300">Tool</Link></li>
-              <li><Link href="#" className="hover:text-purple-400 transition duration-300">Template</Link></li>
+              <li><Link href="/example" className="hover:text-purple-400 transition duration-300">Example</Link></li>
               <li><Link href="#" className="hover:text-purple-400 transition duration-300">Blog</Link></li>
             </ul>
           </div>

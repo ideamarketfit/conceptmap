@@ -4,7 +4,7 @@ import { getAllTools, getAllTemplates } from '@/lib/airtable'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.chatdiagram.com'
   const languages = ['en', 'ja', 'ko', 'zh-Hant', 'es', 'fr', 'pt', 'de', 'it', 'he', 'ar']
-  const routes = ['', '/tool', '/template']
+  const routes = ['', '/example']
 
   // Get all tools and templates using airtable functions
   const allTools = await getAllTools()
@@ -15,14 +15,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     allTools.map(tool => [`/tool/${tool.slug}`, new Date(tool.lastmod)])
   )
   const templateLastMods = Object.fromEntries(
-    allTemplates.map(template => [`/template/${template.slug}`, new Date(template.lastmod)])
+    allTemplates.map(template => [`/example/${template.slug}`, new Date(template.lastmod)])
   )
 
   // Combine base routes with dynamic routes
   const pages = [
     ...routes,
     ...allTools.map(tool => `/tool/${tool.slug}`),
-    ...allTemplates.map(template => `/template/${template.slug}`)
+    ...allTemplates.map(template => `/example/${template.slug}`)
   ]
 
   // Generate sitemap entries

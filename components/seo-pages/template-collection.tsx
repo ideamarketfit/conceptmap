@@ -116,7 +116,7 @@ export function TemplateCollection({ templates }: { templates: Template[] }) {
                 {filteredTemplates.map((template) => (
                   <Link 
                     key={template.slug} 
-                    href={getLocalizedPath(`/template/${template.slug}`)}
+                    href={getLocalizedPath(`/example/${template.slug}`)}
                   >
                     <Card className="group h-full overflow-hidden transition-shadow hover:shadow-lg">
                       <div className="aspect-video overflow-hidden bg-gray-100">
